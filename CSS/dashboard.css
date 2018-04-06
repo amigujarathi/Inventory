@@ -1,0 +1,517 @@
+#resizable {
+      float: left;
+      width: 416px;
+      max-width: 480px;
+    }
+    #pagewraper {
+      display: block;
+      overflow: auto;
+    }
+	  
+	  /*Form Wizard*/
+    .col-4 {
+      width:25%;
+      float:left
+    }
+    .bs-wizard {
+      float:left; 
+      width:100%; 
+      margin-left:-10px;
+    }
+    .bs-wizard .bs-wizard-step {
+      padding: 0; 
+      position: relative;
+    }
+    .bs-wizard .bs-wizard-step + .bs-wizard-step {}
+    .bs-wizard .bs-wizard-step .bs-wizard-stepnum {
+      font-size: 12px; 
+      color: #9b9b9b; 
+      line-height: 20px; 
+      margin-bottom: 5px;
+    }
+    .bs-wizard .active .bs-wizard-stepnum {
+      color:#000000; 
+      font-weight: 600;
+    }
+    .bs-wizard .bs-wizard-step .bs-wizard-info {
+      color: #999; 
+      font-size: 14px;
+    }
+    .bs-wizard .bs-wizard-step .bs-wizard-dot {
+      position: absolute; 
+      width: 14px; 
+      height: 14px; 
+      display: block; 
+      background: #fba828; 
+      box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10); 
+      top: 22px; 
+      left: 50%; 
+      margin-top: -15px; 
+      margin-left: -15px; 
+      border-radius: 50%;
+    }
+    .bs-wizard .bs-wizard-step .bs-progress {
+      background:#E1E1E1;
+      position: relative;
+      border-radius: 0px;
+      height: 3px; 
+      box-shadow: none; 
+      margin: 13px 0;
+    }
+    .bs-wizard .bs-wizard-step .bs-progress .bs-progress-bar {
+      width:0px; 
+      box-shadow: none; 
+      background: #fba828; 
+      height: 3px;
+    }
+    .bs-wizard .bs-wizard-step.complete .bs-progress .bs-progress-bar {
+      width:100%;
+    }
+    .bs-wizard .bs-wizard-step.active .bs-progress .bs-progress-bar {
+      width:50%;
+    }
+    .bs-wizard .bs-wizard-step:first-child.active .bs-progress .bs-progress-bar {
+      width:0%;
+    }
+    .bs-wizard .bs-wizard-step:last-child.active .bs-progress .bs-progress-bar {
+      width: 100%;
+    }
+    .bs-wizard .bs-wizard-step.active .bs-wizard-dot {
+      background: #fff;
+      border:2px solid #fba828;
+      width: 16px;
+      height: 16px;
+      margin-top: -16px;
+    }
+    .bs-wizard .bs-wizard-step.disabled .bs-wizard-dot {
+      background: #FFFFFF; 
+      box-shadow: 0 2px 10px 0 rgba(0,0,0,0.10);
+    }
+    .bs-wizard .bs-wizard-step.disabled .bs-wizard-dot:after {
+      opacity: 0;
+    }
+    .bs-wizard > .bs-wizard-step:first-child .bs-progress {
+      left:49%;
+    }
+    .bs-wizard .bs-wizard-step:last-child .bs-progress {
+      width: 49%;
+    }
+    .bs-wizard .bs-wizard-step.disabled a.bs-wizard-dot{
+      pointer-events: none;
+    }
+    /*END Form Wizard*/.
+    dropdown-toggle:hover {
+    }
+    small a{
+    	color: #9b9b9b;
+    	z-index:1;
+    }
+    small a:hover {
+    	color: #818181;
+    	background:url(../images/name-edit-icon.png) no-repeat right;
+    	padding-right:20px;
+    }
+    small a:hover {
+    	
+    }
+    small a.dropdown-item {
+    	padding: 8px 10px;
+        float: left;
+        width: 100%;
+        font-size: 12px;
+    	background:none;
+    }
+    small .dropdown-menu {
+    	z-index:999;
+    }
+	
+	
+	
+	
+/******************************************* Right side content area tabs ****************************************/
+
+.cd-hero-2 {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cd-hero-slider-2 {
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 10px 0 0 0px;
+}
+.cd-hero-slider-2 li {
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.cd-hero-slider-2 li.selected {
+  /* this is the visible slide */
+  position: relative;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+.cd-hero-slider-2 li.move-left {
+  /* slide hidden on the left */
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.cd-hero-slider-2 li.is-moving, .cd-hero-slider-2 li.selected {
+  /* the is-moving class is assigned to the slide which is moving outside the viewport 
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;*/
+}
+
+/* -------------------------------- 
+
+Slider navigation
+
+-------------------------------- */
+.cd-slider-nav-2 {
+  z-index: 2;
+  height: 47px;
+  background: #FFFFFF;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.14);
+}
+.cd-slider-nav-2 nav {
+  display: inline-block;
+  position: relative;
+  height: 47px;
+  width: 96%;
+}
+.cd-slider-nav-2 { 
+  margin:0px;
+  padding:0px;
+}
+.cd-slider-nav-2 .cd-marker-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 145px;
+  background-color: #ffffff;
+  border-bottom:3px solid #F5A623;
+  /*box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,0,.24); */
+  -webkit-transition: -webkit-transform 0.2s, box-shadow 0.2s;
+  -moz-transition: -moz-transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cd-slider-nav-2 .cd-marker-2.item-2 {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.cd-slider-nav-2 li {
+  display: inline-block;
+  min-width: 145px;
+  text-align: center;
+  float:left;
+}
+.cd-slider-nav-2 li.selected a {
+  color: #4a4a4a;
+  font-weight: 600;
+}
+.no-touch .cd-slider-nav-2 li.selected a:hover {
+  background-color: transparent;
+}
+.cd-slider-nav-2 a {
+  display: block;
+  position: relative;
+  padding: 15px;
+  font-size: 13px;
+  color: #757575;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  text-decoration: none;
+}
+.cd-slider-nav-2 a:hover, .cd-slider-nav-2 a:visited, .cd-slider-nav-2 a:active {
+    text-decoration: none;
+}
+.cd-slider-nav-2 .cd-marker-2.item-2 {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.cd-slider-nav-2 .cd-marker-2.item-3 {
+  -webkit-transform: translateX(200%);
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -o-transform: translateX(200%);
+  transform: translateX(200%);
+}
+.cd-slider-nav-2 .cd-marker-2.item-4 {
+  -webkit-transform: translateX(300%);
+  -moz-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  -o-transform: translateX(300%);
+  transform: translateX(300%);
+}
+.cd-slider-nav-2 .cd-marker-2.item-5 {
+  -webkit-transform: translateX(400%);
+  -moz-transform: translateX(400%);
+  -ms-transform: translateX(400%);
+  -o-transform: translateX(400%);
+  transform: translateX(400%);
+}
+
+.editable-dropdown {
+  height: 150px;
+  overflow-y: auto;
+}
+small a.dropdown-item:hover {
+  background: #eee;
+}
+
+.tabcontent {float:left; width:100%;}
+
+/* -------------------------------- 
+
+Javascript disabled
+
+-------------------------------- */
+.no-js .cd-hero-slider-2 li {
+  display: none;
+}
+.no-js .cd-hero-slider-2 li.selected {
+  display: block;
+}
+
+.no-js .cd-slider-nav-2 {
+  display: none;
+}
+
+
+p.slide-heading {
+    font-size: 16px;
+    color: #424649;
+    font-weight: 600;
+    margin: 10px 0px 30px;
+	padding-left:20px;
+}
+  p.po-label-name {
+    font-size: 12px;
+	color: #8D8D8D;
+	text-transform:uppercase;
+}
+p.po-label-value {
+    font-size: 14px;
+	color: #595959;
+    font-weight: 600;
+    margin-top: 5px;
+}
+p.label-name {
+    font-size: 13px;
+	color: #4A4A4A;
+    line-height: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+p.label-value {
+    font-size: 13px;
+	color: #9B9B9B;
+    margin-bottom: 20px;
+}
+.modal {overflow:hidden;}
+.modal.right.fade.in .modal-dialog {top: 124px;}
+
+p.list-item-data-name {
+    font-family: 'Montserrat';
+    font-size: 20px;
+	color: #424649;
+    font-weight: 600;
+    margin: 20px 0px 5px;
+    text-decoration: none;
+}
+p.list-item-data-location {
+    font-family: 'Open Sans';
+    font-size: 13px;
+	color: #9E9E9E;
+    margin: 0 0 10px 0;
+    line-height: 20px;
+}
+p.list-item-data-price {
+    font-family: 'Open Sans';
+    font-size: 20px;
+	color: #F7951D;
+    margin: 20px 0px 5px;
+    font-weight: 600;
+    text-align: right;
+}
+p.list-item-data-tenure {
+    font-family: 'Open Sans';
+    font-size: 13px;	
+	color: #A8A8A8;
+    margin: 0;
+    font-weight: 400;
+    text-align: right;
+}
+
+p.pplist-label-name {
+    font-size: 13px;
+    color: #4A4A4A;
+    line-height: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+p.pplist-label-value {
+    font-size: 13px;
+    color: #9B9B9B;
+    margin-bottom: 8px;
+}
+
+
+/* Side Slide Styles Starts Here */
+
+ul.feature-list {
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+}
+ul.feature-list li {
+    float: left;
+    margin-right: 20px;
+    width: 140px;
+    text-align: center;
+    margin-bottom: 25px;
+	position:relative;
+	transform:none;
+}
+img {
+    vertical-align: middle;
+}
+p.feature-list-grey {
+    color: #424649;
+    margin-top: 0;
+}
+
+ul.listing-info {
+    list-style: none;
+    margin: 0px 0 30px 3px;
+    padding: 0;
+    overflow: auto;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+}
+ul.listing-info li {
+    padding:0px 0px 10px 20px;
+    background:url(../images/tick-mark.png) no-repeat 0 6px;
+    background-size: 12px 12px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #3c3c3c;
+	transform:none;
+}
+div.map {
+    overflow: hidden;
+    margin-bottom: 50px;
+	margin-left:5px;
+}
+
+.cd-hero-slider-2 .row {
+	margin-left:5px;
+	margin-right:5px;
+}
+
+/* Side Slide Styles End Here */
+
+
+/* ----- Chips and Autocomplete Styles Starts Here ------- */
+
+.add-chip-link {
+  font-size: 12px;
+  font-weight: normal;
+  color: #989898;
+  float:left;
+  padding:10px;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+.autocomplete input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  outline:none;
+}
+.autocomplete input[type=text] {
+  width: 183px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  font-size: 13px;
+  font-weight: normal;
+  color: #4a4a4a;
+}
+.autocomplete input[type=submit] {
+  background-color: DodgerBlue;
+  color: #fff;
+  cursor: pointer;
+}
+.autocomplete-items {
+  position: absolute;
+  border: solid 1px #f2f2f2;
+  font-size: 12px;
+  font-weight: normal;
+  color: #4a4a4a;
+  border-bottom: none;
+  border-top: none;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height:150px;
+  overflow-y:scroll;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff; 
+  border-bottom: 1px solid #d4d4d4; 
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9; 
+}
+.autocomplete-active {
+  background-color: DodgerBlue !important; 
+  color: #ffffff; 
+}
+
+/* ----- Chips and Autocomplete Styles Ends Here ------- */
+
+
+.dropdown-menu {
+	border:0px;
+	border-radius:0px;
+	background:#fff;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.editable-dropdown2 {
+  height: 110px;
+  overflow-y: auto;
+}
