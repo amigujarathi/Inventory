@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRM Dashboard</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+ 
+</head>
+<body class="fa-page">
+  <div class="wrapper">
+  <!-- Main Menu bar -->
+  <div class="main-menu" style="border-right: 1px solid #E6E6E6; height: 100vh; background: #fff; padding-right: 0;">
+    <ul class="nav nav-sidebar text-center crm-main-menu">
+      <li><a href="#"><img src="images/logo-min.png"></a></li>
+      <li ><a href="addProduct.html" data-toggle="tooltip" title="Add Products" data-placement="right">Add Products /<br> Update / Delete</a></li>
+      <li ><a href="addCustomer.html" data-toggle="tooltip" title="Add Customers" data-placement="right">Add Customer /<br> Update / Delete</a></li>
+      <li class="active-item"><a href="#" data-toggle="tooltip" title="Sale Analysis" data-placement="right">Sale Analysis</a></li>
+      <li ><a href="customizeMgmt.html" data-toggle="tooltip" title="Customize Management" data-placement="right">Customize Management</a></li>
+      <li ><a href="billing.html" data-toggle="tooltip" title="Billing" data-placement="right">Billing</a></li>
+    </ul>
+  </div>
+  <!-- End Main Menu bar -->
+
+
+    <!-- right content area -->
+    <div class="property-panel">
+
+      <div id="Service-request" class="tabcontent">
+        <div class="mainHead">
+            <h3 class="page-title"><span style="margin-left: 20px;">Product Management</span>
+              <div class="pull-right m-rt-20">
+                <a href="#" class="m-rt-10">Logout</a>
+              </div>
+            </h3>
+        </div>
+                
+        <ul class="cd-hero-slider" id="listing-div">
+          <li class="selected">
+            <h2 class="starred">Monthly Report</h2>
+            <hr style="width: 96%; height: 1px;">
+            <div class="wrapperSale">
+              <div id="chartContainer" style="height: 370px; max-width: 1200px;"></div>
+            </div> 
+          </li>
+        </ul>
+        <!-- .cd-hero-slider -->
+        <!-- END All Properties listing -->
+      </div>
+     
+    </div><!-- END right content area -->
+  </div><!-- End Content Area -->
+  <script>
+      window.onload = function () {
+      
+      var chart = new CanvasJS.Chart("chartContainer", {
+        exportEnabled: true,
+        animationEnabled: true,
+        title:{
+          text: "Sale Analysis"
+        },
+        // subtitles: [{
+        //   text: "Click Legend to Hide or Unhide Data Series"
+        // }], 
+        axisX: {
+          title: "Report"
+        },
+        axisY: {
+          title: "Filter - Units",
+          titleFontColor: "#4F81BC",
+          lineColor: "#4F81BC",
+          labelFontColor: "#4F81BC",
+          tickColor: "#4F81BC"
+        },
+        axisY2: {
+          title: "Filter - Units",
+          titleFontColor: "#C0504E",
+          lineColor: "#C0504E",
+          labelFontColor: "#C0504E",
+          tickColor: "#C0504E"
+        },
+        toolTip: {
+          shared: true
+        },
+        legend: {
+          cursor: "pointer",
+          itemclick: toggleDataSeries
+        },
+        data: [{
+          type: "column",
+          name: "Selling Price",
+          showInLegend: true,      
+          yValueFormatString: "#,##0.# Units",
+          dataPoints: [
+            { label: "January", y: 25000},
+            { label: "February", y: 135 },
+            { label: "March", y: 425 },
+            { label: "April", y: 130 },
+            { label: "May", y: 20015 },
+            { label: "June", y: 25342 },
+            { label: "July", y: 528 },
+            { label: "August", y: 205 },
+            { label: "September", y: 242 },
+            { label: "October", y: 342 },
+            { label: "November", y: 220 },
+            { label: "December", y: 542 }
+          ]
+        },
+        {
+          type: "column",
+          name: "Cost Price",
+          axisYType: "secondary",
+          showInLegend: true,
+          yValueFormatString: "#,##0.# Units",
+          dataPoints: [
+            { label: "January", y: 210.5 },
+            { label: "February", y: 135 },
+            { label: "March", y: 425 },
+            { label: "April", y: 130 },
+            { label: "May", y: 205 },
+            { label: "June", y: 242 },
+            { label: "July", y: 528 },
+            { label: "August", y: 215 },
+            { label: "September", y: 242 },
+            { label: "October", y: 242 },
+            { label: "November", y: 342 },
+            { label: "December", y: 221 }
+          ]
+        }]
+      });
+      chart.render();
+      
+      function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+          e.dataSeries.visible = false;
+        } else {
+          e.dataSeries.visible = true;
+        }
+        e.chart.render();
+      }
+      
+      }
+      </script>
+      <script src="js/canvasjs.min.js"></script>
+
+</body>
+</html>
